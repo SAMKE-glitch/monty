@@ -43,6 +43,7 @@ void mnty_push(stack_t **stack, unsigned int line_number)
 	else
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
+		exit(EXIT_FAILURE);
 	}
 }
 
