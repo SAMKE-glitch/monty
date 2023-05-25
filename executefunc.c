@@ -35,6 +35,12 @@ int exec_mnty(FILE *fle_fd)
 	unsigned int line_number = 0;
 	char *opcode = strtok(line, " \t\n");
 
+	if (fle_fd == NULL)
+	{
+		fprintf(stderr, "USAGE: monty file\n");
+		exit(EXIT_FAILURE);
+	}
+
 	while (fgets(line, urefu, fle_fd) != NULL)
 	{
 		void (*op_func)(stack_t **, unsigned int) = read_op_func(opcode);
