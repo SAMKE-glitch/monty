@@ -19,7 +19,7 @@ void mnty_push(stack_t **stack, unsigned int line_number)
 		{
 			if (!isdigit(arg[i]) && arg[i] != '-')
 			{
-				fprintf(stderr, "L%u: usage: push requires an integer argument\n", line_number);
+				fprintf(stderr, "L%u: usage: push integer\n", line_number);
 				exit(EXIT_FAILURE);
 			}
 		}
@@ -42,7 +42,7 @@ void mnty_push(stack_t **stack, unsigned int line_number)
 	}
 	else
 	{
-		fprintf(stderr, "L%u: usage: push requires an integers argument\n", line_number);
+		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 	}
 }
 
