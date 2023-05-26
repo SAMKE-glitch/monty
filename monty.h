@@ -46,7 +46,7 @@ void mnty_pall(stack_t **stack, unsigned int line_number);
 int exec_mnty(FILE *fle_fd);
 void (*read_op_func(char *opcode))(stack_t**, unsigned int);
 void mnty_pint(stack_t **stack, unsigned int line_number);
-
-
+void mnty_pop(stack_t **stack, unsigned int line_number);
+void mnty_swap(stack_t **stack, unsigned int line_number);
 
 #endif

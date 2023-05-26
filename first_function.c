@@ -87,3 +87,50 @@ void mnty_pint(stack_t **stack, unsigned int line_number)
 	}
 	printf("%d\n", (*stack)->n);
 }
+
+/**
+ * mnty_pop - function that removes top element of the stack
+ * @stack: the stack where we remove the top element
+ * @line_number: the current line of the monty bytecode file
+ * Return: nothing
+ */
+void mnty_pop(stack_t **stack, unsigned int line_number)
+{
+	stack_t *tempo;
+
+	if ((*stack) == NULL)
+	{
+		fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	tempo = *stack;
+	*stack = (*stack)->next;
+
+	if (*stack != NULL)
+		(*stack)->prev = NULL;
+
+	free(tempo);
+}
+/**
+ * mnty_swap - function that top 2 elements of the stack
+ * @stack: the stack to swap elements
+ * @line_number: te current line inse the monty bytecode file
+ * Return: nothing
+ */
+void mnty_swap(stack_t **stack, unsigned int line_number)
+{
+	stack_t *temp;
+
+	if (*stack == NULL || (*stack)->next == NULL)
+	{
+		fprintf(stderr, "L%u: can't swap, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+
+	temp = *stack;
+	*stack = (*stack)->next;
+	temp->prev = (*stack)->next;
+	(*stack)->next = temp;
+	(*stack)->prev = NULL;
+	temp->next = NULL;
+}
