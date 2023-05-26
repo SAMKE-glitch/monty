@@ -11,19 +11,19 @@ void mnty_push(stack_t **stack, unsigned int line_number)
 	int value;
 	size_t i;
 	stack_t *new_node;
-	char *arg = strtok(NULL, " \t\n");
+	char *lines = strtok(NULL, " \t\n");
 
-	if (arg)
+	if (lines)
 	{
-		for (i = 0; arg[i] != '\0'; i++)
+		for (i = 0; lines[i] != '\0'; i++)
 		{
-			if (!isdigit(arg[i]) && arg[i] != '-')
+			if (!isdigit(lines[i]) && lines[i] != '-')
 			{
 				fprintf(stderr, "L%u: usage: push integer\n", line_number);
 				exit(EXIT_FAILURE);
 			}
 		}
-		value = atoi(arg);
+		value = atoi(lines);
 
 		new_node = malloc(sizeof(stack_t));
 
@@ -70,4 +70,20 @@ void mnty_pall(stack_t **stack, unsigned int line_number)
 		printf("%d\n", current->n);
 		current = current->next;
 	}
+}
+
+/**
+ * mnty_pint - function that prints the value at the top of the stack
+ * @stack: the stack where the value is
+ * @line_number: The current line of the monty bytecode file
+ * Return: Nothing
+ */
+void mnty_pint(stack_t **stack, unsigned int line_number)
+{
+	if (*stack == NULL)
+	{
+		fprintf(stderr, "L%u: can't pint, stack empty\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	printf("%d\n", (*stack)->n);
 }
