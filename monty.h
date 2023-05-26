@@ -7,6 +7,9 @@
 #include <string.h>
 #include <ctype.h>
 
+#define STACK 0
+#define QUEUE 1
+
 
 
 
@@ -54,9 +57,12 @@ void mnty_sub(stack_t **stack, unsigned int line_number);
 void mnty_div(stack_t **stack, unsigned int line_number);
 void mnty_mul(stack_t **stack, unsigned int line_number);
 void mnty_mod(stack_t **stack, unsigned int line_number);
-
-
-
+void mnty_pchar(stack_t **stack, unsigned int line_number);
+void mnty_pstr(stack_t **stack, unsigned int line_number);
+void mnty_rotl(stack_t **stack, unsigned int line_number);
+void mnty_rotr(stack_t **stack, unsigned int line_number);
+void mnty_stack(stack_t **stack, unsigned int line_number);
+void mnty_queue(stack_t **stack, unsigned int line_number);
 
 
 
