@@ -52,7 +52,8 @@ void mnty_add(stack_t **stack, unsigned int line_number);
 void mnty_nop(stack_t **stack, unsigned int line_number);
 void mnty_sub(stack_t **stack, unsigned int line_number);
 void mnty_div(stack_t **stack, unsigned int line_number);
-
+void mnty_mul(stack_t **stack, unsigned int line_number);
+void mnty_mod(stack_t **stack, unsigned int line_number);
 
 
 
