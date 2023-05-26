@@ -48,5 +48,17 @@ void (*read_op_func(char *opcode))(stack_t**, unsigned int);
 void mnty_pint(stack_t **stack, unsigned int line_number);
 void mnty_pop(stack_t **stack, unsigned int line_number);
 void mnty_swap(stack_t **stack, unsigned int line_number);
+void mnty_add(stack_t **stack, unsigned int line_number);
+void mnty_nop(stack_t **stack, unsigned int line_number);
+void mnty_sub(stack_t **stack, unsigned int line_number);
+void mnty_div(stack_t **stack, unsigned int line_number);
+
+
+
+
+
+
+
+
 
 #endif
