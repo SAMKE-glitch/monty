@@ -9,7 +9,7 @@
  */
 void (*read_op_func(char *opcode))(stack_t**, unsigned int)
 {
-	instruction_t op_fun[] = {{"push", mnty_push}, {"pall", mnty_pall}, {"pint", mnty_pint}, {NULL, NULL}};
+	instruction_t op_fun[] = {{"push", mnty_push},{"pall", mnty_pall}, {"pint", mnty_pint}, {"pop", mnty_pop}, {"swap", mnty_swap},{"add", mnty_add},{"nop", mnty_nop}, {"sub", mnty_sub}, {"div", mnty_div}, {"mul", mnty_mul}, {"mod", mnty_mod}, {"pchar", mnty_pchar}, {"pstr", mnty_pstr}, {"rotl", mnty_rotl}, {"rotr",mnty_rotr}, {"stack", mnty_stack}, {"queue", mnty_queue}, {NULL, NULL}};
 
 	int i;
 
