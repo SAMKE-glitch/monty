@@ -30,7 +30,7 @@ void (*read_op_func(char *opcode))(stack_t**, unsigned int)
 int exec_mnty(FILE *fle_fd)
 {
 	stack_t *stack = NULL;
-	char line [1024];
+	char line[1024];
 	unsigned int line_number = 0;
 	char *opcode;
 	void (*op_func)(stack_t **, unsigned int);

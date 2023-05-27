@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * mnty_mod - computers the modulus of the second top elemt by top element of stack
+ * mnty_mod - modulus of the second top elemt by top element of stack
  * @stack: double pointer to the top node of the stack
  * @line_number: current line of the Monty bytecode file
  *

@@ -16,7 +16,7 @@ void mnty_rotl(stack_t **stack, unsigned int line_number)
 		top = *stack;
 		bottom = *stack;
 
-		while(bottom->next != NULL)
+		while (bottom->next != NULL)
 			bottom = bottom->next;
 
 		*stack = top->next;
